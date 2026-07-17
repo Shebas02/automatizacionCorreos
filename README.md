@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Automatización de respuestas de correos de soporte
 
 Proyecto académico desarrollado en Python para clasificar correos de soporte y generar
@@ -45,3 +46,6 @@ El reporte HTML se genera en `htmlcov/index.html`.
 - `main`: versión estable.
 - `developer`: integración del trabajo del equipo.
 - `staging`: versión validada y lista para despliegue.
+=======
+# automatizacionCorreos
+>>>>>>> 954de7dac795a986a45c8e43d3326374623ffc30
