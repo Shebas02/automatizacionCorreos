@@ -1,5 +1,6 @@
 from src.servicio import procesar_correo
 
+
 def main() -> None:
     print("=== Automatización de respuestas de soporte ===")
     nombre = input("Nombre del usuario (opcional): ")
@@ -13,6 +14,7 @@ def main() -> None:
         print(resultado["respuesta"])
     except (TypeError, ValueError) as error:
         print(f"Error: {error}")
+
 
 if __name__ == "__main__":
     main()

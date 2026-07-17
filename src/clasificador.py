@@ -1,9 +1,15 @@
 PALABRAS_CLAVE = {
     "acceso": ["ingresar", "login", "contraseña", "clave", "acceso", "bloqueado"],
-    "transferencias": ["transferencia", "envío de dinero", "beneficiario", "cuenta destino"],
+    "transferencias": [
+        "transferencia",
+        "envío de dinero",
+        "beneficiario",
+        "cuenta destino",
+    ],
     "pagos": ["pago", "débito", "factura", "recaudación", "cobro"],
     "tarjetas": ["tarjeta", "pin", "bloqueo", "visa"],
 }
+
 
 def clasificar_correo(asunto: str, cuerpo: str) -> str:
     """Clasifica un correo de soporte según palabras clave."""

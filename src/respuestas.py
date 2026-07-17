@@ -31,6 +31,7 @@ PLANTILLAS = {
     ),
 }
 
+
 def generar_respuesta(categoria: str, nombre: str | None = None) -> str:
     """Genera una respuesta formal con base en la categoría detectada."""
     if categoria not in PLANTILLAS:
@@ -38,5 +39,7 @@ def generar_respuesta(categoria: str, nombre: str | None = None) -> str:
 
     respuesta = PLANTILLAS[categoria]
     if nombre and nombre.strip():
-        respuesta = respuesta.replace("Estimado usuario", f"Estimado/a {nombre.strip()}")
+        respuesta = respuesta.replace(
+            "Estimado usuario", f"Estimado/a {nombre.strip()}"
+        )
     return respuesta
