@@ -20,6 +20,7 @@ respuestas formales automáticas.
 ├── app.py
 ├── src/
 ├── tests/
+├── pyproject.toml
 ├── requirements.txt
 └── .github/workflows/python-ci.yml
 ```
@@ -36,7 +37,9 @@ python app.py
 ## Pruebas y cobertura
 
 ```bash
-pytest --cov=src --cov-branch --cov-report=term-missing --cov-report=html
+python -m flake8 src tests app.py
+python -m black --check src tests app.py
+python -m pytest
 ```
 
 El reporte HTML se genera en `htmlcov/index.html`.
@@ -46,5 +49,3 @@ El reporte HTML se genera en `htmlcov/index.html`.
 - `main`: versión estable.
 - `developer`: integración del trabajo del equipo.
 - `staging`: versión validada y lista para despliegue.
-=======
-# automatizacionCorreos
