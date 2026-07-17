@@ -1,0 +1,39 @@
+name: Python CI
+
+on:
+  push:
+    branches: [developer, staging, main]
+  pull_request:
+    branches: [developer, staging, main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validar estilo
+        run: |
+          flake8 src tests app.py --max-line-length=100
+
+      - name: Ejecutar pruebas y cobertura
+        run: |
+          pytest --cov=src --cov-branch --cov-report=term-missing --cov-report=html --cov-fail-under=80
+
+      - name: Publicar reporte HTML
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-cobertura
+          path: htmlcov/
