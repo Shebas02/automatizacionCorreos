@@ -1,0 +1,6 @@
+# Automatización de Respuestas de Correos de Soporte
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Pytest](https://img.shields.io/badge/Pytest-11%20Tests-success)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![CI](https://img.shields.io/badge/GitHub_Actions-Passing-success)
